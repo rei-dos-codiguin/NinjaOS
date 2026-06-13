@@ -1,0 +1,4 @@
+fastboot true install boot.img
+fastboot true install boot.img.zip
+fastboot extract boot.img.zip
+fastboot image boot "boot.img"
