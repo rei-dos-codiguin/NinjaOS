@@ -1,5 +1,5 @@
 //panic.h
-voud panic(void) {
+void panic(void) {
 static inline void cpu_halt(void) {
 #if defined(__x86_64__) || defined(__i386__)
     asm volatile("hlt");
