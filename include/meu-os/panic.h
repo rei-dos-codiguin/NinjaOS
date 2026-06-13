@@ -1,5 +1,5 @@
-//panic.h
-void panic(void) {
+// panic.h
+
 static inline void cpu_halt(void) {
 #if defined(__x86_64__) || defined(__i386__)
     asm volatile("hlt");
@@ -14,4 +14,12 @@ static inline void cpu_halt(void) {
     for (;;)
         ;
 #endif
+}
+
+void panic(void) {
+    log(FATAL, "Kernel panic");
+
+    for (;;) {
+        cpu_halt();
+    }
 }
