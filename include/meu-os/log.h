@@ -28,3 +28,7 @@ static inline void log(enum levels_de_log nivel, const char *msg) {
     print(msg);
     print("\n");
 }
+#define info(msg)    log(INFO, msg)
+#define warning(msg) log(WARNING, msg)
+#define error(msg)   log(ERROR, msg)
+#define fatal(msg)   log(FATAL, msg)
